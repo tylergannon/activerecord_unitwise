@@ -1,0 +1,8 @@
+class <%= migration_class_name %> < ActiveRecord::Migration
+  def change
+<% attribute_names.each do |attribute| -%>
+    add_column :<%= table_name %>, :<%= attribute %>_scalar, :float
+    add_column :<%= table_name %>, :<%= attribute %>_units, :string, limit: 50
+<% end -%>
+  end
+end

@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Tyler Gannon"]
   spec.email         = ["tgannon@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{ActiveRecord extensions for Unitwise.}
+  spec.description   = %q{ActiveRecord extensions for Unitwise.}
+  spec.homepage      = "https://github.com/tylergannon/activerecord_unitwise"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
@@ -26,6 +26,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+  spec.add_dependency "unitwise", ">= 2.0"
 
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
