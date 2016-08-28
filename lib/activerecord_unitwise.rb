@@ -22,7 +22,6 @@ module ActiverecordUnitwise
             Unitwise(#{attribute}_scalar, #{attribute}_units) : nil
         end
         "
-      puts method
       class_eval method
     end
 
@@ -50,7 +49,6 @@ module ActiverecordUnitwise
         self.#{attribute}_units  = value.unit.expression
       "
       method += "end"
-      puts method
       class_eval method
     end
   end
